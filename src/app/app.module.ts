@@ -7,11 +7,13 @@ import { ChartModule } from 'primeng/chart';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReportSegmentationComponent } from './report-segmentation/report-segmentation.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReportSegmentationComponent
+    ReportSegmentationComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
