@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ChartModule } from 'primeng/chart';
+import { ButtonModule } from 'primeng/button';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,8 @@ import { ReportPurchasesComponent } from './report-purchases/report-purchases.co
 import { ReportHoursComponent } from './report-hours/report-hours.component';
 import { ReportMapComponent } from './report-map/report-map.component';
 import { GMapModule } from 'primeng/gmap';
+import { LoginComponent } from './login/login.component';
+import { ReportDashboardComponent } from './report-dashboard/report-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { GMapModule } from 'primeng/gmap';
     HeaderComponent,
     ReportPurchasesComponent,
     ReportHoursComponent,
-    ReportMapComponent
+    ReportMapComponent,
+    LoginComponent,
+    ReportDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,8 @@ import { GMapModule } from 'primeng/gmap';
     ChartModule,
     GMapModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

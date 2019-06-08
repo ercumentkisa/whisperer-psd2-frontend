@@ -25,6 +25,7 @@ h1 {
 
 .right {
   width: 20%;
+  height: 100%;
   padding: 1rem 2rem 1rem 1rem;
   font-style: italic;
   text-align: right;

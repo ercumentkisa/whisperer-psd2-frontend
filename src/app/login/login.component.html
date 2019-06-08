@@ -1,0 +1,41 @@
+<div class="login-container">
+  <div class="login-box">
+    <table style="width:100%;">
+      <tr>
+        <td>
+          <h3>Whisperer Login</h3>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i>☺</span>
+            <input type="text" class="form-input" pInputText placeholder="Username">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="ui-inputgroup">
+            <span class="ui-inputgroup-addon"><i class="fa fa-user"></i>♥</span>
+            <input type="password" class="form-input" pInputText placeholder="Password">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: right">
+          <table style="width: 100%;">
+            <tr>
+              <td style="text-align: left">
+                <p-button label="Signup" icon="pi pi-plus" iconPos="left" (onClick)="handleSignup()"></p-button>
+              </td>
+              <td style="text-align: right">
+                <p-button label="Login" icon="pi pi-check" iconPos="left" [routerLink]="['/dashboard']"></p-button>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
