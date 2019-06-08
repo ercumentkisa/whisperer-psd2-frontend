@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-report-segmentation',
   templateUrl: './report-segmentation.component.html',
   styleUrls: ['./report-segmentation.component.css']
 })
+
 export class ReportSegmentationComponent implements OnInit {
 
+  configUrl = 'http://54.171.160.15:8080/report/segmentation';
   data: any;
   options: any;
   genders: any[];
@@ -14,27 +17,7 @@ export class ReportSegmentationComponent implements OnInit {
   ages: any[];
   selectedAge: any;
 
-  constructor() {
-    this.data = {
-      labels: ['Gold', 'Silver', 'Bronze', 'None'],
-      datasets: [
-        {
-          data: [40, 100, 25, 45],
-          backgroundColor: [
-            "#DAA520",
-            "#C0C0C0",
-            "#cd7f32",
-            "#ffffff"
-          ],
-          hoverBackgroundColor: [
-            "#DAA520",
-            "#C0C0C0",
-            "#cd7f32",
-            "#ffffff"
-          ]
-        }]
-    };
-
+  constructor(private http: HttpClient) {
     this.options = {
       legend: {
         position: 'bottom'
@@ -57,7 +40,9 @@ export class ReportSegmentationComponent implements OnInit {
       { name: '55 and above', code: '55-120' }
     ];
     this.selectedAge = this.ages[0];
+    this.getData();
   }
+
   ngOnInit() {
   }
 
@@ -68,5 +53,29 @@ export class ReportSegmentationComponent implements OnInit {
   onChangeAge(newAgeIndex) {
     this.selectedAge = this.ages[newAgeIndex].code;
     console.log("Selected Age: " + this.selectedAge);
+  }
+  getData() {
+      this.http.get(this.configUrl).subscribe((res) => {
+        let dataPoints = [res.Platinum,res.Silver,res.Bronze,res.None];
+        this.data = {
+          labels: ['Gold', 'Silver', 'Bronze', 'None'],
+          datasets: [
+            {
+              data: dataPoints,
+              backgroundColor: [
+                "#b49822",
+                "#bbbbbb",
+                "#e66d28",
+                "#ffffff"
+              ],
+              hoverBackgroundColor: [
+                "#b49822",
+                "#bbbbbb",
+                "#e66d28",
+                "#ffffff"
+              ]
+            }]
+        };
+    });
   }
 }
