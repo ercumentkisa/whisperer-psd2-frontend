@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { ReportSegmentationComponent } from './report-segmentation/report-segmentation.component';
 import { HeaderComponent } from './header/header.component';
 import { ReportPurchasesComponent } from './report-purchases/report-purchases.component';
+import { ReportHoursComponent } from './report-hours/report-hours.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReportSegmentationComponent,
     HeaderComponent,
-    ReportPurchasesComponent
+    ReportPurchasesComponent,
+    ReportHoursComponent
   ],
   imports: [
     BrowserModule,
