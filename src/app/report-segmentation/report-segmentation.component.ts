@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReportSegmentationComponent implements OnInit {
 
   data: any;
+  options: any;
 
   constructor() {
     this.data = {
@@ -16,18 +17,24 @@ export class ReportSegmentationComponent implements OnInit {
         {
           data: [40, 100, 25, 45],
           backgroundColor: [
-            "#b49822",
-            "#bbbbbb",
-            "#e66d28",
+            "#DAA520",
+            "#C0C0C0",
+            "#cd7f32",
             "#ffffff"
           ],
           hoverBackgroundColor: [
-            "#b49822",
-            "#bbbbbb",
-            "#e66d28",
+            "#DAA520",
+            "#C0C0C0",
+            "#cd7f32",
             "#ffffff"
           ]
         }]
+    };
+
+    this.options = {
+      legend: {
+        position: 'bottom'
+      }
     };
   }
   ngOnInit() {

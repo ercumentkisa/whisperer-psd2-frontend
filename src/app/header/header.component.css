@@ -1,11 +1,32 @@
 div {
   background-color: rgb(63, 114, 155);
   color: rgb(255, 255, 255);
+  margin-bottom: 0.5em;
+  font-family: Roboto, sans-serif;
 }
 
 h1 {
-  font-family: Roboto, sans-serif;
-  font-size: 1.25rem;
   padding: 1rem;
+  font-style: italic;
+  margin: 0rem;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4em;
+}
+
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 20%;
+  padding: 1rem 2rem 1rem 1rem;
+  font-style: italic;
+  text-align: right;
   margin: 0rem;
 }

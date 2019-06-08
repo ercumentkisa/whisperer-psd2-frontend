@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportHoursComponent implements OnInit {
 
-
   data: any;
+  options: any;
 
   constructor() {
     this.data = {
@@ -29,6 +29,12 @@ export class ReportHoursComponent implements OnInit {
         }
       ]
     }
+
+    this.options = {
+      legend: {
+        position: 'bottom'
+      }
+    };
   }
 
 

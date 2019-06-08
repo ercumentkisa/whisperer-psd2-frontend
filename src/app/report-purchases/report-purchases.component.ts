@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReportPurchasesComponent implements OnInit {
 
   data: any;
+  options: any;
 
   constructor() {
     this.data = {
@@ -27,6 +28,12 @@ export class ReportPurchasesComponent implements OnInit {
         }
       ]
     }
+
+    this.options = {
+      legend: {
+        position: 'bottom'
+      }
+    };
   }
 
   ngOnInit() {
