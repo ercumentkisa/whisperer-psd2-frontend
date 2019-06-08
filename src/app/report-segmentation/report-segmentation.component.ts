@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-report-segmentation',
@@ -55,27 +55,27 @@ export class ReportSegmentationComponent implements OnInit {
     console.log("Selected Age: " + this.selectedAge);
   }
   getData() {
-      this.http.get(this.configUrl).subscribe((res) => {
-        let dataPoints = [res.Platinum,res.Silver,res.Bronze,res.None];
-        this.data = {
-          labels: ['Gold', 'Silver', 'Bronze', 'None'],
-          datasets: [
-            {
-              data: dataPoints,
-              backgroundColor: [
-                "#b49822",
-                "#bbbbbb",
-                "#e66d28",
-                "#ffffff"
-              ],
-              hoverBackgroundColor: [
-                "#b49822",
-                "#bbbbbb",
-                "#e66d28",
-                "#ffffff"
-              ]
-            }]
-        };
+    this.http.get(this.configUrl).subscribe((res) => {
+      var dataPoints = [res["Platinum"], res["Silver"], res["Bronze"], res["None"]];
+      this.data = {
+        labels: ['Gold', 'Silver', 'Bronze', 'None'],
+        datasets: [
+          {
+            data: dataPoints,
+            backgroundColor: [
+              "#b49822",
+              "#bbbbbb",
+              "#e66d28",
+              "#ffffff"
+            ],
+            hoverBackgroundColor: [
+              "#b49822",
+              "#bbbbbb",
+              "#e66d28",
+              "#ffffff"
+            ]
+          }]
+      };
     });
   }
 }
