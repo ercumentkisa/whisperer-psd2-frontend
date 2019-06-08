@@ -1,5 +1,20 @@
 <div class="report-container">
   <p class="report-title">Segmentation Report</p>
   <hr />
+  <div style="text-align: right">
+    <select>
+      <option value="">All Genders</option>
+      <option value="F">Female</option>
+      <option value="M">Male</option>
+    </select>
+    &nbsp;
+    <select>
+      <option value="">All Ages</option>
+      <option value="18-25">18-25</option>
+      <option value="25-35">25-35</option>
+      <option value="35-55">35-55</option>
+      <option value="55-100">55 or above</option>
+    </select>
+  </div>
   <p-chart type="doughnut" [data]="data" [options]="options"></p-chart>
 </div>
