@@ -11,19 +11,21 @@ export class ReportSegmentationComponent implements OnInit {
 
   constructor() {
     this.data = {
-      labels: ['A', 'B', 'C'],
+      labels: ['Gold', 'Silver', 'Bronze', 'None'],
       datasets: [
         {
-          data: [300, 50, 100],
+          data: [40, 100, 25, 45],
           backgroundColor: [
-            "#FF6384",
-            "#36A2EB",
-            "#FFCE56"
+            "#b49822",
+            "#bbbbbb",
+            "#e66d28",
+            "#ffffff"
           ],
           hoverBackgroundColor: [
-            "#FF6384",
-            "#36A2EB",
-            "#FFCE56"
+            "#b49822",
+            "#bbbbbb",
+            "#e66d28",
+            "#ffffff"
           ]
         }]
     };
