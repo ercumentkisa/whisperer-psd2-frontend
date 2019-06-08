@@ -16,15 +16,39 @@ export class ReportPurchasesComponent implements OnInit {
       datasets: [
         {
           label: 'Restaurant',
-          backgroundColor: '#42A5F5',
-          borderColor: '#1E88E5',
+          backgroundColor: '#ffcf70',
+          borderColor: '#ffcf70',
           data: [65, 59, 80, 81, 56, 55]
         },
         {
           label: 'Groceries',
           backgroundColor: '#9CCC65',
-          borderColor: '#7CB342',
+          borderColor: '#9CCC65',
           data: [28, 48, 40, 19, 86, 27]
+        },
+        {
+          label: 'Shopping',
+          backgroundColor: '#90d0f0',
+          borderColor: '#90d0f0',
+          data: [90, 32, 21, 44, 87, 60]
+        },
+        {
+          label: 'Health',
+          backgroundColor: '#cbb4d6',
+          borderColor: '#cbb4d6',
+          data: [12, 14, 18, 21, 5, 9]
+        },
+        {
+          label: 'Transportation',
+          backgroundColor: '#98cc6a',
+          borderColor: '#98cc6a',
+          data: [18, 18, 18, 18, 18, 18]
+        },
+        {
+          label: 'Leisure',
+          backgroundColor: '#b0b3b6',
+          borderColor: '#b0b3b6',
+          data: [18, 18, 18, 18, 18, 18]
         }
       ]
     }
