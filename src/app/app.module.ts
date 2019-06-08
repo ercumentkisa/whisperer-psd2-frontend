@@ -10,6 +10,9 @@ import { ReportSegmentationComponent } from './report-segmentation/report-segmen
 import { HeaderComponent } from './header/header.component';
 import { ReportPurchasesComponent } from './report-purchases/report-purchases.component';
 import { ReportHoursComponent } from './report-hours/report-hours.component';
+import { ReportMapComponent } from './report-map/report-map.component';
+import { GMapModule } from 'primeng/gmap';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +20,14 @@ import { ReportHoursComponent } from './report-hours/report-hours.component';
     ReportSegmentationComponent,
     HeaderComponent,
     ReportPurchasesComponent,
-    ReportHoursComponent
+    ReportHoursComponent,
+    ReportMapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartModule
+    ChartModule,
+    GMapModule
   ],
   providers: [],
   bootstrap: [AppComponent]
