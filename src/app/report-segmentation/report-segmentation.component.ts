@@ -56,7 +56,8 @@ export class ReportSegmentationComponent implements OnInit {
   }
   getData() {
     this.http.get(this.configUrl).subscribe((res) => {
-      var dataPoints = [res["Platinum"], res["Silver"], res["Bronze"], res["None"]];
+      var dataPoints = [res["Gold"], res["Silver"], res["Bronze"], res["None"]];
+      console.log(JSON.stringify(dataPoints));
       this.data = {
         labels: ['Gold', 'Silver', 'Bronze', 'None'],
         datasets: [
