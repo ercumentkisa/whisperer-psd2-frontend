@@ -1,5 +1,27 @@
 <div class="report-container">
   <p class="report-title">Purchase Categories</p>
   <hr />
+  <div style="text-align: right">
+    <select (change)="onChangeAge($event.target.options.selectedIndex)" [(ngModel)]="selectedCurrency">
+      <option *ngFor="let item of currencies" [ngValue]="item">{{item.name}}</option>
+    </select>
+    &nbsp;
+    <select (change)="onChangeGender($event.target.options.selectedIndex)" [(ngModel)]="selectedGender">
+      <option *ngFor="let item of genders" [ngValue]="item">{{item.name}}</option>
+    </select>
+    &nbsp;
+    <select (change)="onChangeAge($event.target.options.selectedIndex)" [(ngModel)]="selectedAge">
+      <option *ngFor="let item of ages" [ngValue]="item">{{item.name}}</option>
+    </select>
+    &nbsp;
+    <select (change)="onChangeAge($event.target.options.selectedIndex)" [(ngModel)]="selectedCreditDebit">
+      <option *ngFor="let item of creditDebit" [ngValue]="item">{{item.name}}</option>
+    </select>
+    &nbsp;
+    <select (change)="onChangeAge($event.target.options.selectedIndex)" [(ngModel)]="selectedInstallments">
+      <option *ngFor="let item of installments" [ngValue]="item">{{item.name}}</option>
+    </select>
+  </div>
+  <br />
   <p-chart type="bar" [data]="data" [options]="options"></p-chart>
 </div>

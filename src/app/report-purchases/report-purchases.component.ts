@@ -9,6 +9,16 @@ export class ReportPurchasesComponent implements OnInit {
 
   data: any;
   options: any;
+  currencies: any[];
+  selectedCurrency: any;
+  genders: any[];
+  selectedGender: any;
+  ages: any[];
+  selectedAge: any;
+  creditDebit: any[];
+  selectedCreditDebit: any;
+  installments: any[];
+  selectedInstallments: any;
 
   constructor() {
     this.data = {
@@ -58,6 +68,42 @@ export class ReportPurchasesComponent implements OnInit {
         position: 'bottom'
       }
     };
+
+    this.currencies = [
+      { name: 'Euros', code: 'EUR' }
+    ];
+    this.selectedCurrency = this.currencies[0];
+
+    this.genders = [
+      { name: 'All Genders', code: '' },
+      { name: 'Female', code: 'F' },
+      { name: 'Male', code: 'M' }
+    ];
+    this.selectedGender = this.genders[0];
+
+    this.ages = [
+      { name: 'All Ages', code: '18-120' },
+      { name: '18-25', code: '18-25' },
+      { name: '26-35', code: '26-35' },
+      { name: '36-45', code: '36-45' },
+      { name: '46-55', code: '46-55' },
+      { name: '55 and above', code: '55-120' }
+    ];
+    this.selectedAge = this.ages[0];
+
+    this.creditDebit = [
+      { name: 'Credit & Debit', code: 'CD' },
+      { name: 'Credit', code: 'C' },
+      { name: 'Debit', code: 'D' },
+    ];
+    this.selectedCreditDebit = this.creditDebit[0];
+
+    this.installments = [
+      { name: 'Full Payments & Installments', code: 'PI' },
+      { name: 'Full Payments', code: 'P' },
+      { name: 'Installment', code: 'I' },
+    ];
+    this.selectedInstallments = this.installments[0];
   }
 
   ngOnInit() {
