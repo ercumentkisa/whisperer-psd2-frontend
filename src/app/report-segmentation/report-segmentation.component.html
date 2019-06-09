@@ -2,12 +2,12 @@
   <p class="report-title">Segmentation Report</p>
   <hr />
   <div style="text-align: right">
-    <select (change)="onChangeGender($event.target.options.selectedIndex)" [(ngModel)]="selectedGender">
-      <option *ngFor="let item of genders" [ngValue]="item">{{item.name}}</option>
+    <select (ngModelChange)="onChangeGender($event)" [(ngModel)]="selectedGender">
+      <option *ngFor="let item of genders" [ngValue]="item.code">{{item.name}}</option>
     </select>
     &nbsp;
-    <select (change)="onChangeAge($event.target.options.selectedIndex)" [(ngModel)]="selectedAge">
-      <option *ngFor="let item of ages" [ngValue]="item">{{item.name}}</option>
+    <select (ngModelChange)="onChangeAge($event)" [(ngModel)]="selectedAge">
+      <option *ngFor="let item of ages" [ngValue]="item.code">{{item.name}}</option>
     </select>
   </div>
   <p-chart type="doughnut" [data]="data" [options]="options"></p-chart>

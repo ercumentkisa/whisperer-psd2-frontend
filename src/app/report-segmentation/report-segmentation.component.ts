@@ -29,7 +29,7 @@ export class ReportSegmentationComponent implements OnInit {
       { name: 'Female', code: 'F' },
       { name: 'Male', code: 'M' }
     ];
-    this.selectedGender = this.genders[0];
+    this.selectedGender = this.genders[0].code;
 
     this.ages = [
       { name: 'All Ages', code: '18-120' },
@@ -39,20 +39,20 @@ export class ReportSegmentationComponent implements OnInit {
       { name: '46-55', code: '46-55' },
       { name: '55 and above', code: '55-120' }
     ];
-    this.selectedAge = this.ages[0];
+    this.selectedAge = this.ages[0].code;
     this.getData();
   }
 
   ngOnInit() {
   }
 
-  onChangeGender(newGenderIndex) {
-    this.selectedGender = this.genders[newGenderIndex].code;
-    console.log("Selected Gender: " + this.selectedGender);
+  onChangeGender(newGender) {
+    console.log("Selected Gender: " + newGender);
+    this.selectedGender = newGender;
   }
-  onChangeAge(newAgeIndex) {
-    this.selectedAge = this.ages[newAgeIndex].code;
-    console.log("Selected Age: " + this.selectedAge);
+  onChangeAge(newAge) {
+    console.log("Selected Age: " + newAge);
+    this.selectedAge = newAge;
   }
   getData() {
     this.http.get(this.configUrl).subscribe((res) => {
