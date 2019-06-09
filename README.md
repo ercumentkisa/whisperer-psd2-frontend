@@ -33,3 +33,13 @@ Whisperer has a potential that can grow in many directions.
 * pavel.schoffer@klarna.com
 * moien.goli@klarna.com
 
+## Technical Details
+
+This project contains of a frontend and a backend application.
+
+* Frontend https://github.com/ercumentkisa/whisperer-psd2-frontend
+* Backend: https://github.com/pschoffer/whisperer-psd2
+
+## Demo
+
+Visit http://54.171.160.15/ for a simple demo.
