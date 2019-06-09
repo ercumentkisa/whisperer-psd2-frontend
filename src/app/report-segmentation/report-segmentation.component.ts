@@ -25,7 +25,7 @@ export class ReportSegmentationComponent implements OnInit {
     };
 
     this.genders = [
-      { name: 'All Genders', code: '' },
+      { name: 'All Genders', code: 'A' },
       { name: 'Female', code: 'F' },
       { name: 'Male', code: 'M' }
     ];
@@ -49,13 +49,15 @@ export class ReportSegmentationComponent implements OnInit {
   onChangeGender(newGender) {
     console.log("Selected Gender: " + newGender);
     this.selectedGender = newGender;
+    this.getData();
   }
   onChangeAge(newAge) {
     console.log("Selected Age: " + newAge);
     this.selectedAge = newAge;
+    this.getData();
   }
   getData() {
-    this.http.get(this.configUrl).subscribe((res) => {
+    this.http.get(this.configUrl+"/"+this.selectedGender+"/"+this.selectedAge).subscribe((res) => {
       var dataPoints = [res["Gold"], res["Silver"], res["Bronze"], res["None"]];
       console.log("Fetched segment data: " + JSON.stringify(dataPoints));
 
