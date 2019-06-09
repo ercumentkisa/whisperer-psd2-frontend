@@ -1,27 +1,35 @@
-# WhispererSpa
+# Whisperer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+Whisperer is a merchant analytics tool based on PSD2.
 
-## Development server
+### How it Works?
+We partner with merchants to improve their ability to understand the customer base. Also, we are providing them real-time reports on purchase habits.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Merchant creates an account on Whisperer
+* Merchant tells about Whisperer to its customers and offers discounts/gifts if they sign up.
+* Customer signs up to Whisperer and approves to share his/her financial data with Whisperer.
+* Whisperer obtains an API token for that customer and stores it in database.
+* Whisperer's crawlers consume data from PSD2 APIs and populate transactions into a database.
+* We aggregate that data and provide business reports and metrics to merchants.
 
-## Code scaffolding
+### Why Whisperer?
+Today, only big merchants have the capability of building customer loyalty and analytics platforms. Whisperer provides this capability to small merchants as well.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Moreover, the existing loyalty and analytics platforms work with only that merchants or that banks customer base. Whisperer works with all banks and all merchants.
 
-## Build
+### Future Work
+Whisperer has a potential that can grow in many directions.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Pre-defined reports for merchants
+* Dynamic reports for every merchant need
+* Campaign recommendation engine
+* Merchant integrations for very granular order details
 
-## Running unit tests
+## Team
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3 Klarnauts from Klarna:
 
-## Running end-to-end tests
+* ercument.kisa@klarna.com
+* pavel.schoffer@klarna.com
+* moien.goli@klarna.com
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
