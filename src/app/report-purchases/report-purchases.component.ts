@@ -44,14 +44,14 @@ export class ReportPurchasesComponent implements OnInit {
         },
         {
           label: 'Health',
-          backgroundColor: '#cbb4d6',
-          borderColor: '#cbb4d6',
+          backgroundColor: '#da0b37',
+          borderColor: '#da0b37',
           data: [12, 14, 18, 21, 5, 9]
         },
         {
           label: 'Transportation',
-          backgroundColor: '#98cc6a',
-          borderColor: '#98cc6a',
+          backgroundColor: '#cbb4d6',
+          borderColor: '#cbb4d6',
           data: [18, 18, 18, 18, 18, 18]
         },
         {
